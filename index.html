@@ -9,7 +9,7 @@
  
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/styles.css">
      <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
 
@@ -32,8 +32,8 @@
           </div>
         </div>
         <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
-            <span class="fa fa-sign-in"></span> Login</a>
+          <!--  Removed data-toggle <a data-toggle="modal" data-target="#loginModal"> -->
+           <a id="myBtn"> <span class="fa fa-sign-in" ></span> Login</a>
         </span>
       </nav>
 
@@ -86,8 +86,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#formModal">
-                    <button  role="button" class="btn btn-block nav-link btn-warning"> Reserve Table</button></a>
+                    <!-- Removed data-toggle to invoke modal by javascript <a data-toggle="modal" data-target="#formModal"> -->
+                    <button  role="button" class="btn btn-block nav-link btn-warning" id="reserveTable"> Reserve Table</button></a>
                   <!--  <a href="#reservetable" type="button" class="btn btn-warning btn-lg">Reserve Table</a> -->
                 </div>
             </div>
@@ -378,6 +378,20 @@
                 }
             });
     </script>
+    <script>
+        $(document).ready(function(){
+          $("#myBtn").click(function(){
+            $("#loginModal").modal();
+          });
+        });
+        </script>
+        <script>
+            $(document).ready(function(){
+              $("#reserveTable").click(function(){
+                $("#formModal").modal();
+              });
+            });
+            </script>
 </body>
 
 </html>

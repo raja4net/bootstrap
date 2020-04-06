@@ -56,6 +56,15 @@ body {
   z-index: 1;
 }
 
-.modal{
-  color: black;
+.modal-header {
+  background-color: #512DA8;
+  color: floralwhite
+}
+
+.modal-content {
+  background: #9575CD;
+}
+
+.close {
+  color:floralwhite
 }
